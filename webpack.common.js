@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.jsx'
+    index: './src/index.jsx'
   },
   plugins: [
     new CleanWebpackPlugin(['web/*.*'], {root: path.resolve(__dirname , '..'), verbose: true })    
   ],
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, './../web/')
   },
   resolve: {
