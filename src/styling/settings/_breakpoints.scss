@@ -1,0 +1,44 @@
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 416px;
+
+$breakpoint-lg-max: $breakpoint-xl - 1;
+$breakpoint-md-max: $breakpoint-lg - 1;
+$breakpoint-sm-max: $breakpoint-md - 1;
+$breakpoint-xs-max: $breakpoint-sm - 1;
+$breakpoint-xxs-max: $breakpoint-xs - 1;
+
+$bp-xl:"(min-width: #{$breakpoint-xl})";
+
+$bp-lg:"(min-width: #{$breakpoint-lg}) and (max-width: #{$breakpoint-lg-max})";
+$bp-lg-xl:  "(min-width: #{$breakpoint-lg})";
+
+$bp-md:     "(min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-md-max})";
+$bp-md-lg:  "(min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-lg-max})";
+$bp-md-xl:  "(min-width: #{$breakpoint-md})";
+
+$bp-sm:     "(min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-sm-max})";
+$bp-sm-md:  "(min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md-max})";
+$bp-sm-lg:  "(min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-lg-max})";
+$bp-sm-xl:  "(min-width: #{$breakpoint-sm})";
+
+$bp-xs:     "(min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-xs-max})";
+$bp-xs-sm:  "(min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-sm-max})";
+$bp-xs-md:  "(min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-md-max})";
+$bp-xs-lg:  "(min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-lg-max})";
+$bp-xs-xl:  "(min-width: #{$breakpoint-xs})";
+
+$bp-xxs:    "(max-width: #{$breakpoint-xxs-max})";
+$bp-xxs-xs: "(max-width: #{$breakpoint-xs-max})";
+$bp-xxs-sm: "(max-width: #{$breakpoint-sm-max})";
+$bp-xxs-md: "(max-width: #{$breakpoint-md-max})";
+$bp-xxs-lg: "(max-width: #{$breakpoint-lg-max})";
+
+//usage
+/*
+@media #{$bp-xs-xl} {
+@include generate-columns("xs");
+}
+*/
