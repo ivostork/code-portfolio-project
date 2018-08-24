@@ -5,13 +5,13 @@
 /* 
 - Spacing and font sizes should be relative to the font size which is set by browser (16px usually)
 - Which means that you should use relative unit for 99% cases with some exceptions - (1px border)
-- There is one small exception - media queries shuldbe used with em - some browsers have issues with rem in media queries (Safari)
+- There is one small exception - media queries shuld be used with em - some browsers have issues with rem in media queries (Safari)
 - Let's say width is set in px and user will increase the font size - the text will not fit into the container
 - It would be dangerous to set padding in em because em is always relative to the font size feature
 */
 
 /**
- * CONVERTOR - wen using em(breakpoints, spacing),rem (font sizes) everything changes proportionally when user will modify browser font size
+ * CONVERTOR - when using em(breakpoints),rem (almost everything else) everything changes proportionally when user will modify browser font size
  */
 
 $font-size-base: 16px;
@@ -24,15 +24,90 @@ $font-size-base: 16px;
    @return ($px/$base)*1rem;
 }
 
-/// Remove the unit of a length
-/// @param {Number} $number - Number to remove unit from
-/// @return {Number} - Unitless number
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+/**
+ * 2D,3D AUTOPREFIXER 
+ - CSS features with browser prefixes - autoprefixer is really hard to set up, it is easier not to use it at all
+*/
+
+ @mixin transform($modifiers) {
+  -webkit-transform: $modifiers;
+  transform: $modifiers;
+}
+
+@mixin transform-origin($modifiers) {
+  -webkit-transform-origin: $modifiers;
+  transform-origin: $modifiers;
+}
+
+@mixin perspective($value) {
+  -webkit-perspective: $value;
+  perspective: $value;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+
+/**
+ * GRADIENTS
+*/
+@mixin linear-gradient($modifiers...) {
+  background: -webkit-linear-gradient($modifiers);
+  background: linear-gradient($modifiers);
+}
+
+
+/**
+ * BROWSER SPECIFIC
+*/
+
+@mixin appearance($value) {
+  // added important, because this was often overridden by normal=ize.css
+  -webkit-appearance: $value !important;
+  -moz-appearance: $value !important;
+  appearance: $value !important;
+}
+
+%button-reset {
+  @include appearance(none);
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  color: inherit;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
   }
 
-  @return $number;
+  &::-moz-placeholder {
+      @content;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+
+  &::placeholder {
+      @content;
+  }
+}
+
+// Vertical writing mode, combine with 180deg rotation to flip its orientation
+@mixin writing-mode-vertical {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
 
 
