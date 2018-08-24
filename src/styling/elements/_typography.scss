@@ -33,11 +33,29 @@ a {
   color:currentColor;
 }
 
-// Vertical rhythm
-p,
-ul,
-ol {
-  margin-bottom: rem($base-unit*2);
-}
+// @font-face
+// {
+//   font-family: 'Barlow';
+//   src: url("../fonts/barlow-v1-latin-regular.woff") format("woff"),
+//         url("../fonts/barlow-v1-latin-regular.woff2") format("woff2");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
+// @font-face
+// {
+//   font-family: 'Barlow';
+//   src: url("../fonts/barlow-v1-latin-500.woff") format("woff"),
+//         url("../fonts/barlow-v1-latin-500.woff2") format("woff2");
+//   font-weight: bold;
+//   font-style: normal;
+// }
 
+// @font-face
+// {
+//   font-family: 'Share';
+//   src: url("../fonts/share-v8-latin-regular.woff") format("woff"),
+//         url("../fonts/share-v8-latin-regular.woff2") format("woff2");
+//   font-weight: bold;
+//   font-style: normal;
+// }
