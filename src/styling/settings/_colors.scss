@@ -5,7 +5,7 @@ $colors: (
   #FFFFFF         // 4  -- white
   rgba(0,0,0,.54) // 5 -- grey
   rgba(0,0,0,.24) // 6 -- lighter grey
-  #f0f0f0         // 8 -- lightest grey
+  #f0f0f0         // 7 -- lightest grey
 );
 
 /*************************/
@@ -20,10 +20,10 @@ $colors: (
 // }
 
 @function color($i) {
-  @if nth($colors, $i) !=3D DEPRECATED {
+  @if nth($colors, $i) != DEPRECATED {
     @return nth($colors, $i);
   } @else {
-    @warn "COLOR #{$i} IS DEPRECATED AND CANNOT=BE USED.";
+    @warn "COLOR #{$i} IS DEPRECATED AND CANNOT BE USED.";
     @return false;
   }
 }

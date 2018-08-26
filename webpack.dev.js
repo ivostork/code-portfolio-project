@@ -6,31 +6,14 @@ const webpack = require('webpack');
 
 module.exports = merge(common, {
   plugins:[
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: false
-    })
+    new webpack.HotModuleReplacementPlugin()    
   ],
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     //contentBase: path.resolve(__dirname, './src/content/img'),
     port: 9000,
     hot: true,
     compress:true,
     host:"0.0.0.0"
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader', 
-          { loader: "sass-loader", options: { sourceMap: true }}
-        ]
-      }
-    ]
   }
 });

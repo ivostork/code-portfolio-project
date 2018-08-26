@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import './styling/index.scss';
+import React from "react";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 const BasicExample = () => (
   <Router>
@@ -46,8 +43,4 @@ const Alert = () => (
   </div>
 );
 
-
-ReactDOM.render(
-  <BasicExample />,
-  app
-);
+export default BasicExample;

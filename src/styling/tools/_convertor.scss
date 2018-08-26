@@ -14,12 +14,12 @@
  * CONVERTOR - when using em(breakpoints),rem (almost everything else) everything changes proportionally when user will modify browser font size
  */
 
- $font-size-base: 16px;
+ $base:16;
 
- @function em($px,$base:$font-size-base) {
+ @function em($p) {
    @return ($px/$base)*1em;
  }
  
- @function rem($px,$base:$font-size-base) {
+ @function rem($px) {
     @return ($px/$base)*1rem;
  }
