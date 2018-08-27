@@ -1,0 +1,27 @@
+.app-styleguide {
+  display: flex;
+
+  padding-top:rem(40);
+
+  .navigation {
+    flex:0 1 rem(320);
+
+    a {
+      display: block;
+      padding:rem(8) 0;
+      text-decoration:none;
+
+      color:color(5);
+
+      &.active {
+        color:color(3);
+        font-weight:bold;
+      }
+    }
+  }
+
+  .content {
+    flex:1 1 auto;
+    margin-left:rem(48);
+  }
+}
