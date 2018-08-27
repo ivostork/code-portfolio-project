@@ -24,6 +24,7 @@
 
 //Components – Aesthetic classes for styling any & all page elements (often combined with the structure of object classes)
 @import 'components/grid';
+@import 'components/header';
 
 //Utils – The most specific styles for overriding anything else in the triangle
 @import 'utils/misc';
