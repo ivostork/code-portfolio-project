@@ -28,6 +28,22 @@ export default class Typography extends React.Component {
           Form category heading
         </h6>
 
+        <br/>
+        <span>
+          Plain list using class <strong>.list</strong>
+        </span>
+        <ul className="list">
+          <li>
+            list item
+          </li>
+          <li>
+            list item
+          </li>
+          <li>
+            list item
+          </li>
+        </ul>
+
       </div>
     );
   }
