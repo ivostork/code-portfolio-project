@@ -17,7 +17,7 @@ import Tables from "./pages/tables";
 export default class Structure extends React.Component {
   render() {
     return (
-      <div>
+      <div className="styleguide">
         <div className="header">
           <div className="container">            
               <div>              
@@ -30,7 +30,7 @@ export default class Structure extends React.Component {
           </div>
         </div>        
         <div className="container">
-          <div className="app-styleguide">
+          <div className="layout">
             <Navigation />
             <div className="content">          
                 <Route exact path="/" component={CodeInfo} />          

@@ -1,0 +1,49 @@
+.styleguide {
+
+  .header{
+    padding-top:rem(24);
+    padding-bottom:rem(24);
+    background:color(4);  
+  }
+
+    .logo {
+      display: inline-block;
+      width:rem(233);
+      height:rem(60);
+      //path is relative to file where is included this sass
+      background-image: url("../content/logo.svg");
+    }
+
+  .layout {
+    display: flex;
+    padding-top:rem(40);
+  }
+
+    .navigation {
+      flex:0 1 rem(320);
+
+      a {
+        display: block;
+        padding:rem(8) 0;
+        text-decoration:none;
+
+        color:color(5);
+
+        &.active {
+          color:color(3);
+          font-weight:bold;
+        }
+      }
+    }
+
+    .content {
+      flex:1 1 auto;
+      margin-left:rem(48);
+    }
+    
+    .color {
+      border:1px solid color(3);
+      width:rem(50);
+      height:rem(50);
+    }
+}

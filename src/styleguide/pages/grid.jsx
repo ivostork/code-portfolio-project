@@ -5,7 +5,9 @@ export default class Grid extends React.Component {
   render() {
     return (
       <div>
-        Grid
+        <h1>Grid</h1>
+        <br/>
+        
       </div>
     );
   }
