@@ -3,9 +3,9 @@ import React from "react";
 export default class SegmentedControls extends React.Component {
   render() {
     return (
-      <div>
+      <h1>
         Segmented controls
-      </div>
+      </h1>
     );
   }
 }
