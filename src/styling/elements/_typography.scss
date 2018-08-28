@@ -1,11 +1,7 @@
-html {
-  font-size:100%;
-  line-height: 1.5;
-  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-  color: black;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@mixin font-display($param: optional){
+
+  //https://css-tricks.com/font-display-masses/
+  //NEEDST TO BE USED INSIDE FONT FACE
 
   //FOIT can't happen in the above the folder section - first impression is really important in this section
   // this makes all browsers to behave like IE - no FOIT at all
@@ -20,7 +16,55 @@ html {
   //which it may choose not to do or it may do it as a low priority depending on what it thinks would be best for the user. 
   //This can be beneficial in situations where the user is on a weak connection and pulling down 
   //a font may not be the best use of resources.
-  font-display:optional;  
+  font-display:$param; 
+}
+
+@font-face
+{
+  font-family: Roboto;
+  src: url("../content/fonts/roboto-regular-webfont.woff") format("woff"),
+        url("../content/fonts/roboto-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+
+  @include font-display;
+}
+
+@font-face
+{
+  font-family: Roboto;
+  src: url("../content/fonts/roboto-medium-webfont.woff") format("woff"),
+        url("../content/fonts/roboto-medium-webfont.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+
+  @include font-display;
+}
+
+@font-face
+{
+  font-family: Roboto;
+  src: url("../content/fonts/roboto-black-webfont.woff") format("woff"),
+        url("../content/fonts/roboto-black-webfont.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+
+  @include font-display;
+}
+
+//https://www.cssfontstack.com/Arial
+$font-family: Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif; 
+
+html {
+  font-size:100%;
+  line-height: 1.5;
+  font-family: $font-family;
+  color: color(3);
+
+  //https://css-tricks.com/almanac/properties/t/text-rendering/
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 @media print {
@@ -28,34 +72,3 @@ html {
       display: none;
   }
 }
-
-a {
-  color:currentColor;
-}
-
-// @font-face
-// {
-//   font-family: 'Barlow';
-//   src: url("../fonts/barlow-v1-latin-regular.woff") format("woff"),
-//         url("../fonts/barlow-v1-latin-regular.woff2") format("woff2");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face
-// {
-//   font-family: 'Barlow';
-//   src: url("../fonts/barlow-v1-latin-500.woff") format("woff"),
-//         url("../fonts/barlow-v1-latin-500.woff2") format("woff2");
-//   font-weight: bold;
-//   font-style: normal;
-// }
-
-// @font-face
-// {
-//   font-family: 'Share';
-//   src: url("../fonts/share-v8-latin-regular.woff") format("woff"),
-//         url("../fonts/share-v8-latin-regular.woff2") format("woff2");
-//   font-weight: bold;
-//   font-style: normal;
-// }

@@ -16,7 +16,7 @@
 
   .layout {
     display: flex;
-    padding-top:rem(40);
+    padding:rem(40) 0;
   }
 
     .navigation {
@@ -39,6 +39,7 @@
     .content {
       flex:1 1 auto;
       margin-left:rem(48);
+
     }
 
       .color {
