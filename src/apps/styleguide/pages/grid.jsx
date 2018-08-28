@@ -53,17 +53,17 @@ export default class Grid extends React.Component {
          The parent class is <strong>.row</strong> and the sibling class is <strong>.col</strong>
         </p>
         <div className="row mb-32">
-          <div className="col">
+          <div className="col-fluid">
             <div className="grid-col">
               .col
             </div>
           </div>
-          <div className="col">
+          <div className="col-fluid">
             <div className="grid-col">
               .col
             </div>
           </div>
-          <div className="col">
+          <div className="col-fluid">
             <div className="grid-col">
               .col
             </div>

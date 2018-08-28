@@ -21,12 +21,14 @@
 //Elements – Single HTML element selectors without classes
 @import 'elements/site';
 @import 'elements/typography';
+@import 'elements/forms';
 
 //Components – Aesthetic classes for styling any & all page elements (often combined with the structure of object classes)
 @import 'components/container';
 @import 'components/grid';
 @import 'components/list';
 @import 'components/buttons';
+@import 'components/forms';
 
 @import 'components/styleguide';
 

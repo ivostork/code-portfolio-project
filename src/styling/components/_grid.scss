@@ -22,7 +22,7 @@ $grid-gutter-narrow: rem(12);
   margin-left: - $grid-gutter-narrow / 2;
   margin-right: - $grid-gutter-narrow / 2;
 
-  > [class^="col"] {
+  > [class^="col-"] {
     padding-left: $grid-gutter-narrow / 2;
     padding-right: $grid-gutter-narrow / 2;
   }
@@ -52,8 +52,8 @@ $grid-gutter-narrow: rem(12);
 }
 
 .row {
-  & > [class^="col"],
-  & > [class*=" col"] {
+  & > [class^="col-"],
+  & > [class*=" col-"] {
     @include col-common;
   }
 }
@@ -80,7 +80,7 @@ $grid-gutter-narrow: rem(12);
       }
 
       // columns fixed/fluid width
-      & > #{$prefix} {
+      & > #{$prefix}-fluid {
         @include flex(1 1 0px);
         width: auto;
       }

@@ -1,0 +1,24 @@
+.form-group {
+  label {
+    display: block;
+    margin-bottom: rem(4);
+  }
+  margin-bottom:rem(24);
+
+  .validation-message {
+    font-size:rem(12);
+    color:color(1);
+  }
+
+  .label-description {
+    font-size:rem(12);
+    color:color(5);
+  }  
+
+  &.is-invalid {
+    input[type="text"],
+    select {
+      border-color:color(1) !important;
+    }
+  }
+}
