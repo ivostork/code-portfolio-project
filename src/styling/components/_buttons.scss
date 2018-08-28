@@ -1,0 +1,48 @@
+@mixin btn-structure {
+  @include appearance(none);
+  display: inline-block;
+  position: relative;  
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: rem(12) rem(16);
+  line-height: 1;
+  
+  opacity: 1;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  background:none;
+  border:none;
+
+  &:active {
+    @include transform(scale(0.98));
+    outline:none;
+  }
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-link {
+  @include btn-structure;  
+}
+
+.btn-primary {
+  border-radius:rem(4);
+  color:color(4);
+  background-color: color(1);
+  border:1px solid transparent;
+}
+
+.btn-secondary {
+  border-radius:rem(4);
+  color:color(1);
+  background-color: color(4);
+  border:1px solid color(1);
+}
+
+.btn-link {
+  text-decoration:underline;
+  color: color(1);
+}
