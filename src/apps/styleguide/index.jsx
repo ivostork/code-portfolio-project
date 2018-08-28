@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 import Structure from './structure';
 
-import './../styling/index.scss';
+import './../../styling/index.scss';
 
 
 ReactDOM.render(

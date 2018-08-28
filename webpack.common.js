@@ -5,8 +5,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    styleguide: './src/styleguide/index.jsx',
-    app: './src/app/index.jsx'
+    styleguide: './src/apps/styleguide/index.jsx',
+    app: './src/apps/app/index.jsx'
   },
   plugins: [
     new CleanWebpackPlugin(['web/*.*'], {root: path.resolve(__dirname , '..'), verbose: true }),

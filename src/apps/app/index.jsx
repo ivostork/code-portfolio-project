@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import BasicExample from './basic';
 
-import './../styling/index.scss';
+import './../../styling/index.scss';
 
 
 ReactDOM.render(

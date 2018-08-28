@@ -34,6 +34,10 @@
   color:color(4);
   background-color: color(1);
   border:1px solid transparent;
+
+  &:hover {
+    text-decoration:underline
+  }
 }
 
 .btn-secondary {
@@ -41,9 +45,17 @@
   color:color(1);
   background-color: color(4);
   border:1px solid color(1);
+
+  &:hover {
+    text-decoration:underline
+  }
 }
 
 .btn-link {
   text-decoration:underline;
   color: color(1);
+
+  &:hover {
+    text-decoration:none
+  }
 }

@@ -11,7 +11,7 @@ export default class Grid extends React.Component {
          The parent class is <strong>.row</strong> and the sibling class is <strong>.col-auto</strong>
         </p>
 
-        <div className="row mb-24">
+        <div className="row mb-32">
           <div className="col-auto">
             <div className="grid-col">
               .col-auto
@@ -32,7 +32,7 @@ export default class Grid extends React.Component {
         <p>
          The parent class is <strong>.row.narrow-gutter</strong> and the sibling class is <strong>.col-auto</strong>
         </p>
-        <div className="row narrow-gutter mb-24">
+        <div className="row narrow-gutter mb-32">
           <div className="col-auto">
             <div className="grid-col">
               .col-auto
@@ -52,7 +52,7 @@ export default class Grid extends React.Component {
         <p>
          The parent class is <strong>.row</strong> and the sibling class is <strong>.col</strong>
         </p>
-        <div className="row mb-24">
+        <div className="row mb-32">
           <div className="col">
             <div className="grid-col">
               .col
