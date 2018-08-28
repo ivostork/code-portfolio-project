@@ -6,12 +6,12 @@ export default class Grid extends React.Component {
     return (
       <div>
         <h1>Grid</h1>
-        <br/>
+
         <p>
          The parent class is <strong>.row</strong> and the sibling class is <strong>.col-auto</strong>
         </p>
-        <br/>
-        <div className="row">
+
+        <div className="row mb-24">
           <div className="col-auto">
             <div className="grid-col">
               .col-auto
@@ -28,15 +28,11 @@ export default class Grid extends React.Component {
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <br/>
-        <br/>
+
         <p>
          The parent class is <strong>.row.narrow-gutter</strong> and the sibling class is <strong>.col-auto</strong>
         </p>
-        <br/>
-        <div className="row narrow-gutter">
+        <div className="row narrow-gutter mb-24">
           <div className="col-auto">
             <div className="grid-col">
               .col-auto
@@ -53,14 +49,10 @@ export default class Grid extends React.Component {
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <br/>
         <p>
          The parent class is <strong>.row</strong> and the sibling class is <strong>.col</strong>
         </p>
-        <br/>
-        <div className="row">
+        <div className="row mb-24">
           <div className="col">
             <div className="grid-col">
               .col
@@ -77,13 +69,9 @@ export default class Grid extends React.Component {
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <br/>
         <p>
          The parent class is <strong>.row</strong> and the sibling classes are <strong>.col-md-4.col-xs-12</strong> and <strong>.col-md-8.col-xs-12</strong> 
         </p>
-        <br/>
         <div className="row">
           <div className="col-md-4 col-xs-12">
             <div className="grid-col">

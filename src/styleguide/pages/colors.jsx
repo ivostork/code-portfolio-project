@@ -7,7 +7,6 @@ export default class Colors extends React.Component {
         <h1>
         Colors
         </h1>
-        <br/>
         <div className="row mb-20">
           <div className="col-auto">
             <div className="color" style={{backgroundColor: "#E6625E"}}>

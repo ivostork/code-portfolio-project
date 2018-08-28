@@ -63,6 +63,8 @@ html {
 
   //https://css-tricks.com/almanac/properties/t/text-rendering/
   text-rendering: optimizeSpeed;
+
+  //https://davidwalsh.name/font-smoothing
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
 }
@@ -71,4 +73,32 @@ html {
   body > *:not(main) {
       display: none;
   }
+}
+
+//base vertical rhythm
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin-bottom:rem(16);
+}
+
+//main page heading
+h1{
+  font-weight: 900;
+  font-size: rem(34);
+}
+
+//form category heading
+h6{
+  font-size:rem(20);
+  font-weight:bold;
+  padding-bottom:rem(8);
+
+  border-bottom: 1px solid color(2);
 }
