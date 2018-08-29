@@ -4,7 +4,7 @@
     {
       "icon": {
         "paths": [
-          "M0 307.2l512 512 512-512z"
+          "M884.364 93.091h-46.546v-93.091h-93.091v93.091h-465.455v-93.091h-93.091v93.091h-46.546c-51.2 0-93.091 41.891-93.091 93.091v744.728c0 51.2 41.891 93.091 93.091 93.091h744.728c51.2 0 93.091-41.891 93.091-93.091v-744.728c0-51.2-41.891-93.091-93.091-93.091zM884.364 930.909h-744.728v-605.092h744.728v605.092z"
         ],
         "attrs": [
           {}
@@ -13,23 +13,53 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "dropdown"
+          "calendar"
         ]
       },
       "attrs": [
         {}
       ],
       "properties": {
+        "order": 5,
+        "id": 3,
+        "name": "calendar",
+        "prevSize": 32,
+        "code": 59651,
+        "ligatures": "calendar"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M0 307.2l512 512 512-512z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "dropdown"
+        ],
+        "grid": 0
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
         "order": 2,
-        "id": 2,
+        "id": 0,
         "name": "select",
         "prevSize": 32,
         "code": 59648,
         "ligatures": "select"
       },
       "setIdx": 0,
-      "setId": 2,
-      "iconIdx": 0
+      "setId": 3,
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -41,10 +71,10 @@
         ],
         "isMulticolor": false,
         "isMulticolor2": false,
-        "grid": 0,
         "tags": [
           "check"
-        ]
+        ],
+        "grid": 0
       },
       "attrs": [
         {}
@@ -58,8 +88,8 @@
         "ligatures": "check"
       },
       "setIdx": 0,
-      "setId": 2,
-      "iconIdx": 1
+      "setId": 3,
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -71,25 +101,25 @@
         ],
         "isMulticolor": false,
         "isMulticolor2": false,
-        "grid": 0,
         "tags": [
           "logout"
-        ]
+        ],
+        "grid": 0
       },
       "attrs": [
         {}
       ],
       "properties": {
         "order": 4,
-        "id": 0,
+        "id": 2,
         "name": "logout",
         "prevSize": 32,
         "code": 59650,
         "ligatures": "logout"
       },
       "setIdx": 0,
-      "setId": 2,
-      "iconIdx": 2
+      "setId": 3,
+      "iconIdx": 3
     }
   ],
   "height": 1024,

@@ -25,6 +25,7 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'calendar': '&#xe903;',
             'select': '&#xe900;',
             'check': '&#xe901;',
             'logout': '&#xe902;',

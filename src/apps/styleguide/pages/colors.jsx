@@ -7,8 +7,8 @@ export default class Colors extends React.Component {
         <h1>
         Colors
         </h1>
-        <span>Primary color, accent color</span>
-        <div className="row mb-20">
+        <p>Primary color, accent color</p>
+        <div className="row mb-32">
           <div className="col-auto">
             <div className="color" style={{backgroundColor: "#E6625E"}}>
             </div>
@@ -18,8 +18,8 @@ export default class Colors extends React.Component {
             </div>
           </div>
         </div>
-        <span>Copy colors</span>
-        <div className="row mb-20">
+        <p>Copy colors</p>
+        <div className="row mb-32">
           <div className="col-auto">
             <div className="color" style={{backgroundColor: "#333333"}}>
             </div>
@@ -33,8 +33,8 @@ export default class Colors extends React.Component {
             </div>
           </div>
         </div>
-        <span>Background colors</span>
-        <div className="row mb-20">
+        <p>Background colors</p>
+        <div className="row mb-32">
           <div className="col-auto">
             <div className="color" style={{backgroundColor: "#ffffff"}}>
             </div>

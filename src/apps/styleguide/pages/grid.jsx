@@ -55,17 +55,17 @@ export default class Grid extends React.Component {
         <div className="row mb-32">
           <div className="col-fluid">
             <div className="grid-col">
-              .col
+              .col-fluid
             </div>
           </div>
           <div className="col-fluid">
             <div className="grid-col">
-              .col
+              .col-fluid
             </div>
           </div>
           <div className="col-fluid">
             <div className="grid-col">
-              .col
+              .col-fluid
             </div>
           </div>
         </div>

@@ -1,6 +1,18 @@
 //pseudo element line-height shouldn't be set in relative units
-$select-icon-width:10px;
-$select-icon-height:10px;
+$select-icon-size:14px;
+$calendar-icon-size:14px;
+
+@mixin controls-icon {
+  //centering
+  position:absolute;
+  right:rem(12);
+  top:0;
+  bottom:0;
+  margin:auto;    
+  
+  @include icon;
+  color:color(1);    
+}
 
 .form-group {
   label {
@@ -28,25 +40,28 @@ $select-icon-height:10px;
   }
 
   .controls-select {
+    position: relative;
+    &:after {
+      @include controls-icon;
+      height:$select-icon-size;      
+      content:'select';
+      font-size:$select-icon-size;
+    }
+  }
+
+  .controls-datepicker {
     position:relative;
     &:after {
-      //centering
-      position:absolute;
-      right:rem(12);
-      top:0;
-      bottom:0;
-      margin:auto;
-      height:$select-icon-height;      
-      
-      @include icon;
-      content:'select';
-      font-size:$select-icon-width;
-      color:color(1);
+      @include controls-icon;
+      height:$calendar-icon-size;      
+      content:'calendar';
+      font-size:$calendar-icon-size;
     }
   }
 
   &.is-disabled {
-    .controls-select {
+    .controls-select,
+    .controls-datepicker{
       &:after {
         color:color(5);
       }
