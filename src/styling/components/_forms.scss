@@ -15,7 +15,8 @@ $calendar-icon-size:14px;
 }
 
 .form-group {
-  label {
+  label,
+  .label {
     display: block;
     margin-bottom: rem(4);
   }

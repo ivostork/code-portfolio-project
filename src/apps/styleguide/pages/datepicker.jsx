@@ -1,5 +1,6 @@
 import React from "react";
-import Input from "./../../core/input";
+import InputWrap from "./../../core/inputWrap";
+import InputText from "./../../core/inputText";
 
 
 export default class Badges extends React.Component {
@@ -12,10 +13,10 @@ export default class Badges extends React.Component {
 
         <div className="row">
           <div className="col-sm-12 col-lg-3">
-            <Input label="From" type="datepicker" />
+            <InputWrap label="From" type="datepicker" />
           </div>
           <div className="col-sm-12 col-lg-3">
-            <Input label="To" type="datepicker" description="This option is temporary disabled" readonly="true"/>
+            <InputWrap label="To" type="datepicker" description="This option is temporary disabled" readonly="true"/>
           </div>
         </div>
       </div>
