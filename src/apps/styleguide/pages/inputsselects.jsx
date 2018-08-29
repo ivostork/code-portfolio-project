@@ -17,7 +17,7 @@ export default class InputsSelects extends React.Component {
         Text inputs
       </h2>
 
-      <div className="row mb-20">
+      <div className="row">
         <div className="col-sm-12 col-lg-fluid">
           <Input label="First Name" type="text" />
         </div>
@@ -29,7 +29,7 @@ export default class InputsSelects extends React.Component {
         </div>
       </div>
 
-      <div className="row mb-20">
+      <div className="row">
         <div className="col-sm-12 col-lg-4">
           <Input label="Customer ID" type="text" readonly="true" />
         </div>            

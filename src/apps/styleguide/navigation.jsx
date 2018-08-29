@@ -14,7 +14,9 @@ export default class Navigation extends React.Component {
           
           <NavLink to="/buttons">Buttons</NavLink>      
           
-          <NavLink to="/inputsselects">Inputs, selects</NavLink>        
+          <NavLink to="/inputsselects">Inputs, selects</NavLink>
+
+          <NavLink to="/datepicker">Datepicker</NavLink>        
           
           <NavLink to="/checkboxesradios">Checkboxes, radio buttons</NavLink>      
           

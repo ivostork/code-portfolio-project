@@ -9,6 +9,7 @@ import Grid from "./pages/grid";
 import Typography from "./pages/typography";
 import Buttons from "./pages/buttons";
 import InputsSelects from "./pages/inputsselects";
+import Datepicker from "./pages/datepicker";
 import CheckboxesRadios from "./pages/checkboxesradios";
 import SegmentedControls from "./pages/segmentedcontrols";
 import Badges from "./pages/badges";
@@ -39,6 +40,7 @@ export default class Structure extends React.Component {
                 <Route path="/typography" component={Typography} />
                 <Route path="/buttons" component={Buttons} />
                 <Route path="/inputsselects" component={InputsSelects} />
+                <Route path="/datepicker" component={Datepicker} />
                 <Route path="/checkboxesradios" component={CheckboxesRadios} />
                 <Route path="/segmentedcontrols" component={SegmentedControls} />
                 <Route path="/badges" component={Badges} />
