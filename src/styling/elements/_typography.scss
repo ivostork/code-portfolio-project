@@ -53,8 +53,18 @@
 }
 
 //https://www.cssfontstack.com/Arial
-$font-family: Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif; 
+$font-family: Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;
 
+//Icons
+@font-face
+{
+  font-family: Icomoon;
+  src: url("../content/fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
 html {
   font-size:100%;
   line-height: 1.5;
@@ -69,11 +79,6 @@ html {
   -moz-osx-font-smoothing: grayscale; 
 }
 
-@media print {
-  body > *:not(main) {
-      display: none;
-  }
-}
 
 //base vertical rhythm
 h1,

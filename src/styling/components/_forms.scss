@@ -1,3 +1,7 @@
+//pseudo element line-height shouldn't be set in relative units
+$select-icon-width:10px;
+$select-icon-height:10px;
+
 .form-group {
   label {
     display: block;
@@ -8,6 +12,7 @@
   .validation-message {
     font-size:rem(12);
     color:color(1);
+    margin-bottom: rem(4);
   }
 
   .label-description {
@@ -19,6 +24,32 @@
     input[type="text"],
     select {
       border-color:color(1) !important;
+    }
+  }
+
+  .controls-select {
+    position:relative;
+    &:after {
+      //centering
+      position:absolute;
+      right:rem(12);
+      top:0;
+      bottom:0;
+      margin:auto;
+      height:$select-icon-height;      
+      
+      @include icon;
+      content:'select';
+      font-size:$select-icon-width;
+      color:color(1);
+    }
+  }
+
+  &.is-disabled {
+    .controls-select {
+      &:after {
+        color:color(5);
+      }
     }
   }
 }

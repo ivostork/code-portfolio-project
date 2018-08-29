@@ -25,10 +25,19 @@ select {
     border-width:2px;
     border-color: color(2) !important;  //more important than error
   }
+}
 
+select {
+  &:disabled{
+    background: color(6);
+    opacity: 1; //Safari reset (opacity: 0.4 in Agent styles)
+  }
+}
+
+input[type="text"] {
   &:disabled,
   &:read-only {
     background: color(6);
-    opacity: 1; //rpotesil: Safari reset (opacity: 0.4 in Agent styles)
+    opacity: 1; //Safari reset (opacity: 0.4 in Agent styles)
   }
 }

@@ -17,6 +17,9 @@ export default class Input extends React.Component {
     let classForInput;
 
     let classForForm = "form-group" + ((this.props.invalid != null) ? " is-invalid" : "");
+    let classForFormDisabled = ((this.props.readonly != null) ? " is-disabled" : "");
+
+    let finalClassForForm = classForForm + " " + classForFormDisabled;
 
     //label description scenario
     let labelDescription;
@@ -35,10 +38,10 @@ export default class Input extends React.Component {
 
     if(whichControls === "text") {
       if(!isReadOnly) {
-        controls = <input type="text" id={this.props.label}/>;
+        controls = <input type="text" id={this.props.label} name={this.props.label}/>;
         
       } else {
-        controls = <input readOnly type="text" id={this.props.label}/>;
+        controls = <input readOnly type="text" id={this.props.label} name={this.props.label}/>;
       }
       classForInput="controls-text";      
     }
@@ -53,12 +56,12 @@ export default class Input extends React.Component {
 
       if(!isReadOnly) {
         controls =       
-        <select id={this.props.label}>
+        <select id={this.props.label} name={this.props.label}>
           {selectItems2}
         </select>;
       } else {
         controls =       
-        <select readOnly id={this.props.label}>
+        <select disabled id={this.props.label} name={this.props.label}>
           {selectItems2}
         </select>;
       }
@@ -67,7 +70,7 @@ export default class Input extends React.Component {
     }
 
     return (
-      <div className={classForForm}>
+      <div className={finalClassForForm}>
         <label htmlFor={this.props.label}>
           {this.props.label}
         </label>
