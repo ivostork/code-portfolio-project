@@ -173,9 +173,71 @@ $radio-value:rem(14);
             transform:scale(1);
           }
         }                
-      } 
-      
+      }       
     }
+  
+    .controls-segmented {
+      display: flex;
+      align-items: center;    
+
+      position:relative;
+      
+      .controls-segmented-item {            
+        //hide input for user but not for screen reader
+        input[type="radio"] {
+          vertical-align: middle;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+
+        flex:1 1 rem(42);
+        min-width:rem(42);        
+      }
+      
+      label {
+        display: block;        
+        height:rem(42);
+        text-align: center;
+        line-height: rem(42);
+        position: relative;        
+        
+        color:color(3);
+        border: 1px solid color(5);
+        background-color: color(4);
+
+        &:before {       
+          position: absolute;          
+          width:100%;          
+          content:"";    
+          display: block;
+          height: rem(42);
+          line-height: rem(42);
+          background-color: color(1);          
+
+          opacity:0;
+          transition: opacity .3s; 
+        }
+
+        span {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      input[type="radio"]:checked + label {
+        &:before {
+          opacity:1;
+        }
+
+        span {
+          color:color(4);
+        }
+      }
+      
+    } 
+
   
 
 

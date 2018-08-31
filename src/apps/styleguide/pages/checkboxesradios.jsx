@@ -10,7 +10,7 @@ export default class CheckboxesRadios extends React.Component {
 
     return (
       <div className="row">
-        <div className="col-xs-6">
+        <div className="col-xs-12 col-lg-6">
           <h1>
             Checkboxes, radios
           </h1>
