@@ -182,7 +182,15 @@ $radio-value:rem(14);
 
       position:relative;
       
-      .controls-segmented-item {            
+      .controls-segmented-item {
+        
+        margin-left:-1px;
+
+        &:first-child {
+          margin-left:0;
+        }
+        
+
         //hide input for user but not for screen reader
         input[type="radio"] {
           vertical-align: middle;
