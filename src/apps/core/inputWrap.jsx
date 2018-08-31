@@ -45,7 +45,7 @@ export default class InputWrap extends React.Component {
         {labelDescription}
       </div>) : (
         <fieldset className={finalClassForForm}>
-          <legend htmlFor={this.props.label}>
+          <legend>
             {this.props.label}
           </legend>
           {validationMessage}

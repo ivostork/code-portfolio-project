@@ -18,7 +18,10 @@ export default class InputBoolean extends React.Component {
       controlsItems = this.props.inputItems.map((item) =>
         <div className="controls-boolean-item" key={item.toString()}>
           <input type={whichControls} id={item} name={this.props.groupName} />
-          <label htmlFor={item}>{item}</label>
+          <span></span>
+          <label htmlFor={item}>
+            {item}
+          </label>
         </div>
       );
       controlsClass="controls-boolean";      

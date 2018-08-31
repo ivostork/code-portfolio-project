@@ -6,8 +6,8 @@ fieldset {
 
 input[type="text"],
 select {
-  padding: rem(8) rem(12);
-  height:rem(38);
+  padding: rem(10);
+  height:rem(42);
   box-sizing: border-box;
   width: 100%;
   
@@ -35,7 +35,6 @@ select {
 }
 
 input[type="text"] {
-  &:disabled,
   &:read-only {
     background: color(6);
     opacity: 1; //Safari reset (opacity: 0.4 in Agent styles)

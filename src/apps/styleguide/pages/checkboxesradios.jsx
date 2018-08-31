@@ -9,29 +9,25 @@ export default class CheckboxesRadios extends React.Component {
     let listOfFunds = ["Santander", "Barclays", "Lloyds", "Aviva"];
 
     return (
-      <div>
-        <h1>
-          Checkboxes, radios
-        </h1>
-        <div className="mb-20">
-          <p>
-            Checkboxes
-          </p>
-          <InputWrap 
-            label="Payment method"
-            type="radio"
-            groupName="payment"
-            inputItems={listOfPayments}/>
-        </div>
-        <div className="mb-20">
-          <p>
-            Radio buttons
-          </p>
-          <InputWrap 
-            label="Funds"
-            type="checkbox"
-            groupName="fund"
-            inputItems={listOfFunds}/>
+      <div className="row">
+        <div className="col-xs-6">
+          <h1>
+            Checkboxes, radios
+          </h1>
+          <div className="mb-20">
+            <InputWrap 
+              label="Payment method"
+              type="radio"
+              groupName="payment"
+              inputItems={listOfPayments}/>
+          </div>
+          <div className="mb-20">
+            <InputWrap 
+              label="Funds"
+              type="checkbox"
+              groupName="fund"
+              inputItems={listOfFunds}/>
+            </div>
           </div>
       </div>
     );
