@@ -17,10 +17,12 @@
   .layout {
     display: flex;
     padding:rem(40) 0;
+    box-sizing: border-box;
   }
 
     .navigation {
-      flex:0 1 rem(320);
+      flex:0 0 rem(240);
+      box-sizing: border-box;
 
       a {
         display: block;
@@ -37,9 +39,10 @@
     }
 
     .content {
+      box-sizing: border-box;
       flex:1 1 auto;
       margin-left:rem(48);
-
+      max-width: calc(100% - #{rem(300)});
     }
 
       .color {

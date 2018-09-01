@@ -1,22 +1,22 @@
 .table {
-  margin: 0 0 rem(24) 0;
-  table { margin-bottom: 0 } 
+  display: block;
+  width: 100%;
   min-height: .01%;
   overflow-x: auto;
-  background-image: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff), linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0));
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+ 
+
+  //shadow
+  min-height: .01%;
+  overflow-x: auto;
+  background-image: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff), linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(255,255, 255, 0));
   background-position: left center, right center, left center, right center;
   background-repeat: no-repeat;
   background-color: #fff;
   background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
   background-attachment: local, local, scroll, scroll;
 
-  @media #{$bp-xxs-lg} {
-    width: 100%;
-    margin-bottom: rem(15);
-    overflow-y: hidden;
-    //-ms-overflow-style: -ms-autohiding-scrollbar; In IE the scrollbar is not visible until mouse hover over the table
-  }
- 
   table{
     width: 100%;   
     border-collapse: separate;
