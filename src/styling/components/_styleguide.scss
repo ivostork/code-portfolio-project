@@ -1,18 +1,52 @@
 .styleguide {
 
   .header{
-    padding-top:rem(24);
-    padding-bottom:rem(24);
+    padding-top:rem(16);
+    padding-bottom:rem(16);
     background:color(4);  
   }
 
-    .logo {
-      display: inline-block;
-      width:rem(233);
-      height:rem(60);
-      //path is relative to file where is index sass
-      background-image: url("../content/logo.svg");
+  .logo {
+    display: inline-block;
+    height:rem(60);
+    //path is relative to file where is index sass
+    background-image: url("../content/logo.svg");
+  }
+
+    .header-xxs-sm {
+      display: none;
+      @media #{$bp-xxs-sm} {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+
+        .hamburger {
+          display: inline-block;
+          width:rem(60);
+          height: rem(60);
+          background-image: url("../content/hamburger.svg");
+          border:none;
+        }
+
+        .logo {          
+          width:rem(60);
+        }
+
+      }      
     }
+  
+    .header-md-xl {
+      display: none;
+      
+      @media #{$bp-md-xl} {
+        display: block;
+        .logo {          
+          width:rem(233);
+        }                     
+      }      
+    }
+
+    
 
   .layout {
     display: flex;
@@ -23,6 +57,11 @@
     .navigation {
       flex:0 0 rem(240);
       box-sizing: border-box;
+      margin-right:rem(48);
+
+      @media #{$bp-xxs-sm} {
+        display: none;
+      }
 
       a {
         display: block;
@@ -40,9 +79,12 @@
 
     .content {
       box-sizing: border-box;
-      flex:1 1 auto;
-      margin-left:rem(48);
+      flex:1 1 auto;      
       max-width: calc(100% - #{rem(300)});
+
+      @media #{$bp-xxs-sm} {
+        max-width: 100%;
+      }
     }
 
       .color {

@@ -1,14 +1,21 @@
-$breakpoint-xl: 1200px;
-$breakpoint-lg: 992px;
-$breakpoint-md: 768px;
-$breakpoint-sm: 576px;
-$breakpoint-xs: 416px;
+$xl:1200;
+$lg:992;
+$md:768;
+$sm:576;
+$xs:416;
 
-$breakpoint-lg-max: $breakpoint-xl - 1;
-$breakpoint-md-max: $breakpoint-lg - 1;
-$breakpoint-sm-max: $breakpoint-md - 1;
-$breakpoint-xs-max: $breakpoint-sm - 1;
-$breakpoint-xxs-max: $breakpoint-xs - 1;
+
+$breakpoint-xl: em($xl);
+$breakpoint-lg: em($lg);
+$breakpoint-md: em($md);
+$breakpoint-sm: em($sm);
+$breakpoint-xs: em($xs);
+
+$breakpoint-lg-max: em($xl - 1);
+$breakpoint-md-max: em($lg - 1);
+$breakpoint-sm-max: em($md - 1);
+$breakpoint-xs-max: em($sm - 1);
+$breakpoint-xxs-max: em($xs - 1);
 
 $bp-xl:"(min-width: #{$breakpoint-xl})";
 

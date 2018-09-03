@@ -48,7 +48,7 @@ export default class Tables extends React.Component {
           <td>{item.citizenship}</td>
           <td>{item.effectiveFrom}</td>
           <td>{item.created}</td>
-          <td>
+          <td className="cell-center">
             <span className={"badge-status-"+item.status+""}>
               {item.status}
             </span>
@@ -71,7 +71,7 @@ export default class Tables extends React.Component {
                 <th>Citizenship</th>
                 <th>Effective From</th>
                 <th>Created</th>
-                <th>Status</th>
+                <th className="cell-center">Status</th>
               </tr>
             </thead>
             <tbody>

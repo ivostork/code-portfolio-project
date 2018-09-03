@@ -1,17 +1,16 @@
 /* 
   ITCSS  - inverted triangle approach invented by Harry Roberts
 */
-
-//Settings – Preprocessor variables and methods (no CSS output)
-@import 'settings/colors';
-@import 'settings/breakpoints';
-
 //Tools – Mixins and functions (no CSS output)
 @import 'tools/convertor';
 @import 'tools/accessibility';
 @import 'tools/animations';
 @import 'tools/flexbox';
 @import 'tools/misc';
+
+//Settings – Preprocessor variables and methods (no CSS output)
+@import 'settings/colors';
+@import 'settings/breakpoints';
 
 //Generic – CSS resets which might include Eric Meyer’s reset, Normalize.css, or your own batch of code
 @import 'generic/normalize';

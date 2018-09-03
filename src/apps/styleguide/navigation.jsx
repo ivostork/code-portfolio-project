@@ -1,32 +1,64 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import CustomLink from './customLink';
 
 export default class Navigation extends React.Component {
-  render () {
-    return (      
-        <div className="navigation">
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    let links = [
+      {
+        path:"/colors",
+        name:"Colors",
+      },
+      {
+        path:"/grid",
+        name:"Grid",
+      },
+      {
+        path:"/typography",
+        name:"Typography",
+      },
+      {
+        path:"/buttons",
+        name:"Buttons",
+      },
+      {
+        path:"/inputsselects",
+        name:"Inputs, selects",
+      },
+      {
+        path:"/datepicker",
+        name:"Datepicker",
+      },
+      {
+        path:"/checkboxesradios",
+        name:"Checkboxes, radio buttons",
+      },
+      {
+        path:"/badges",
+        name:"Badges",
+      },
+      {
+        path:"/tables",
+        name:"Tables",
+      }
+    ];
 
-          <NavLink to="/colors">Colors</NavLink>
+    let renderedLinks = links.map((item, index) => 
+      (
+        <div key={index}>
+          <CustomLink path={item.path} name={item.name} handleCloseButton={this.props.handleCloseButton} isLightboxOn={this.props.isLightboxOn} />
+        </div>
+      )
+    );
+    
 
-          <NavLink to="/grid">Grid</NavLink>    
-          
-          <NavLink to="/typography">Typography</NavLink>      
-          
-          <NavLink to="/buttons">Buttons</NavLink>      
-          
-          <NavLink to="/inputsselects">Inputs, selects</NavLink>
-
-          <NavLink to="/datepicker">Datepicker</NavLink>        
-          
-          <NavLink to="/checkboxesradios">Checkboxes, radio buttons</NavLink>      
-          
-          <NavLink to="/segmentedcontrols">Segmented controls</NavLink>      
-          
-          <NavLink to="/badges">Badges</NavLink>        
-          
-          <NavLink to="/tables">Tables</NavLink>      
-
-        </div>   
+    return(
+      <div>
+        {renderedLinks}
+      </div>
     );
   }
 }

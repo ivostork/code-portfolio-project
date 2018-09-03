@@ -16,7 +16,7 @@
 
  $base:16;
 
- @function em($p) {
+ @function em($px) {
    @return ($px/$base)*1em;
  }
  
