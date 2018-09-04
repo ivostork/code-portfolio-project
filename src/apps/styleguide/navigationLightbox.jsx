@@ -11,18 +11,35 @@ export default class NavigationLightbox extends React.Component {
   handleClick() {
     this.props.closeNavigation();    
   }
-
+  
   render() {
-    return(
-      <div>
-        Lightbox
-        <button type="button" onClick={this.handleClick}>
-          close
-        </button>
-
-        {this.props.children}
-
-      </div>
+    let lightboxStatusClass = ((this.props.isLightboxOn) ? " is-active" : ""); 
+    
+    let navigationStructureRender = (this.props.isLightboxOn) ? 
+    <div className="lightbox-content">
+        <div className="lightbox-header">
+            <button type="button" className="lightbox-close" onClick={this.handleClick}>
+              <span className="sr-only">
+                close
+              </span>
+            </button>  
+        </div>
+        
+        <div className="lightbox-navigation">
+          {this.props.children}
+        </div>  
+      </div> : null;
+    
+    return(              
+      <div className={"lightbox" + lightboxStatusClass + ""}>          
+        {/* opacity 0 by default */}
+        <div className="lightbox-overlay" onClick={this.handleClick}/>
+        {/* width,height specific but empty and pushed to the left */}
+        <div className="lightbox-content-wrapper">
+          {/* display none by default */}          
+            {navigationStructureRender}          
+        </div>
+      </div>      
     );
   }
 }

@@ -41,17 +41,13 @@ export default class Structure extends React.Component {
     }));
   }
 
-  render() {
-    
-    let renderLightbox = (this.state.isLightboxOn) ? 
-      <NavigationLightbox closeNavigation={this.handleCloseButton}>
-        <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                
-      </NavigationLightbox> : null;
-
+  render() {            
     return (
       <div className="styleguide">
-        {/* space for lightbox */}        
-        {renderLightbox}        
+        {/* space for lightbox */} 
+        <NavigationLightbox closeNavigation={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn}>
+          <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                
+        </NavigationLightbox>
         <div>
           <div className="header">
             <div className="container">
