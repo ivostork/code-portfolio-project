@@ -17,7 +17,7 @@ module.exports = {
       filename:'styleguide.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/styleguide.html',
+      template: './src/app.html',
       inject: false,
       chunks: ['app'],
       filename:'app.html'
