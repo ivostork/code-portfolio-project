@@ -1,7 +1,7 @@
 import React from "react";
+import Navigation from './navigation';
 import NavigationLightbox from './navigationLightbox';
 import ResponsiveHeader from './responsiveHeader';
-import Navigation from './navigation';
 
 import { Route, Link } from "react-router-dom";
 
@@ -44,16 +44,14 @@ export default class Structure extends React.Component {
         <div>
           <div className="header">
             <div className="container">
-              <ResponsiveHeader toggleNavigation={this.handleNavigationButton} />                    
+              <ResponsiveHeader toggleNavigation={this.handleNavigationButton}>
+                <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                              
+              </ResponsiveHeader>                                  
             </div>
           </div>        
           <div className="container">
-            <div className="layout">
-              <div className="navigation">                
-                <Navigation handleCloseButton={this.handleCloseButton} isLightboxOn={this.state.isLightboxOn} />                
-              </div>
-              <div className="content">          
-                  <Route exact path="/" component={Inbox} />          
+            <div className="layout">              
+              <div className="content">                            
                   <Route path="/inbox" component={Inbox} />
                   <Route path="/search" component={Search} />
                   <Route path="/report" component={Report} />                                                  

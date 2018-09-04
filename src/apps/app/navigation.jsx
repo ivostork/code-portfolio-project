@@ -32,9 +32,9 @@ export default class Navigation extends React.Component {
     
 
     return(
-      <div>
+      <nav className="navigation">
         {renderedLinks}
-      </div>
+      </nav>
     );
   }
 }

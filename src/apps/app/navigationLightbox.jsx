@@ -23,9 +23,15 @@ export default class NavigationLightbox extends React.Component {
                 close
               </span>
             </button>  
-        </div>
-        
-        <div className="lightbox-navigation">
+        </div>        
+        <div className="lightbox-navigation">          
+          <div className="navigation-meta mb-16">
+              <span className="navigation-copy">Welcome George</span>
+              <span className="navigation-divider" />
+              <button type="button" className="navigation-logout">
+                <span className="sr-only">logout</span>
+              </button>
+          </div>
           {this.props.children}
         </div>  
       </div> : null;
