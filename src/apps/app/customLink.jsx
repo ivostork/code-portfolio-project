@@ -16,7 +16,9 @@ class CustomLink extends React.Component {
   }
 
   render() {
-    let activeClass = (this.props.history.location.pathname === this.props.path) ? "active" : ""; 
+    let pathname = this.props.history.location.pathname;
+    let activeClass = ((pathname === this.props.path) || ((pathname === "/") && (this.props.name == "Inbox") )) ? "active" : "";     
+
     return(
       <button type="button" onClick={this.handleClick} className={activeClass}>
         {this.props.name} 

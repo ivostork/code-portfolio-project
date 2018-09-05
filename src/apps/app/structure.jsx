@@ -49,9 +49,10 @@ export default class Structure extends React.Component {
             </div>
           </div>        
           <div className="container">                         
-            <div className="layout">                            
-                <Route path="/inbox" component={Inbox} />
-                <Route path="/search" component={Search} />                                                                 
+            <div className="layout"> 
+              <Route exact path="/" component={Inbox} />          
+              <Route path="/inbox" component={Inbox} />
+              <Route path="/search" component={Search} />                                                                 
             </div>          
           </div>
         </div>
