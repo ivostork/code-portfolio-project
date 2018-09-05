@@ -34,21 +34,26 @@ export default class InputWrap extends React.Component {
 
     let structureForOutput = (structureTypeText) ? (
       <div className={finalClassForForm}>
-        <label htmlFor={this.props.label}>
-          {this.props.label}
-        </label>
-        {validationMessage}
+        <div className="controls-label">
+          <label htmlFor={this.props.label}>
+            {this.props.label}
+          </label>
+          {validationMessage}
+        </div>
           <InputText 
             type={this.props.type} 
             readonlyvalue={isReadOnly} 
-            inputItems = {this.props.inputItems} /> 
+            inputItems = {this.props.inputItems}
+            inputValue= {this.props.inputValue} /> 
         {labelDescription}
       </div>) : (
         <fieldset className={finalClassForForm}>
-          <legend>
-            {this.props.label}
-          </legend>
-          {validationMessage}
+          <div className="controls-label">
+            <legend>
+              {this.props.label}
+            </legend>
+            {validationMessage}            
+          </div>
           <InputBoolean 
             type={this.props.type} 
             readonlyvalue={isReadOnly} 

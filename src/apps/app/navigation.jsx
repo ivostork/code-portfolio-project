@@ -15,11 +15,7 @@ export default class Navigation extends React.Component {
       {
         path:"/search",
         name:"Search",
-      },
-      {
-        path:"/report",
-        name:"Report",
-      }       
+      }      
     ];
 
     let renderedLinks = links.map((item, index) => 

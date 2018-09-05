@@ -1,6 +1,7 @@
 .header {
   background-color: color(4);
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.24);
+  margin-bottom: rem(40);
 
   @media #{$bp-md-xl} {
     border-bottom:rem(8) solid color(1);    

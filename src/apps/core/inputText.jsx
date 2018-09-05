@@ -17,10 +17,10 @@ export default class InputText extends React.Component {
     //input text
     if(whichControls === "text") {
       if(!isReadOnly) {
-        controls = <input type="text" id={this.props.label} name={this.props.label}/>;
+        controls = <input type="text" id={this.props.label} name={this.props.label} value={this.props.inputValue}/>;
         
       } else {
-        controls = <input readOnly type="text" id={this.props.label} name={this.props.label}/>;
+        controls = <input readOnly type="text" id={this.props.label} name={this.props.label} value={this.props.inputValue}/>;
       }
       classForInput="controls-text";      
     }
@@ -50,10 +50,10 @@ export default class InputText extends React.Component {
     //input datepicker
     if(whichControls === "datepicker") {
       if(!isReadOnly) {
-        controls = <input type="text" id={this.props.label} name={this.props.label}/>;
+        controls = <input type="text" id={this.props.label} name={this.props.label}  defaultValue={this.props.inputValue}/>;
         
       } else {
-        controls = <input readOnly type="text" id={this.props.label} name={this.props.label}/>;
+        controls = <input readOnly type="text" id={this.props.label} name={this.props.label}  defaultValue={this.props.inputValue}/>;
       }
       classForInput="controls-datepicker";      
     }

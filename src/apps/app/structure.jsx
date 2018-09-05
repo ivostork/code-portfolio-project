@@ -7,7 +7,6 @@ import { Route, Link } from "react-router-dom";
 
 import Inbox from "./pages/inbox";
 import Search from "./pages/search";
-import Report from "./pages/report";
 
 
 export default class Structure extends React.Component {  
@@ -49,14 +48,11 @@ export default class Structure extends React.Component {
               </ResponsiveHeader>                                  
             </div>
           </div>        
-          <div className="container">
-            <div className="layout">              
-              <div className="content">                            
-                  <Route path="/inbox" component={Inbox} />
-                  <Route path="/search" component={Search} />
-                  <Route path="/report" component={Report} />                                                  
-              </div>
-          </div>
+          <div className="container">                         
+            <div className="layout">                            
+                <Route path="/inbox" component={Inbox} />
+                <Route path="/search" component={Search} />                                                                 
+            </div>          
           </div>
         </div>
       </div>

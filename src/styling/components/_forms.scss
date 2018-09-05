@@ -21,13 +21,17 @@ $radio-value:rem(14);
   color:color(1);    
 }
 
-.form-group {
+.form-group {        
+  margin-bottom:rem(24);
+
   label,
   legend {
     display: block;
   }
 
-  margin-bottom:rem(24);
+  .controls-label {
+    margin-bottom: rem(4);
+  }
 
   .validation-message {
     font-size:rem(12);
@@ -36,6 +40,7 @@ $radio-value:rem(14);
   }
 
   .label-description {
+    margin-top:rem(4);
     font-size:rem(12);
     color:color(5);
   }  
@@ -45,19 +50,7 @@ $radio-value:rem(14);
     select {
       border-color:color(1) !important;
     }
-  }
-
-  legend {
-    margin-bottom: rem(8);            
-  }
-
-  .controls-select,
-  .controls-text,
-  .controls-datepicker {
-    label{
-      margin-bottom: rem(4);            
-    }
-  }
+  } 
 
   .controls-select {
     position: relative;
