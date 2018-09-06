@@ -8,6 +8,16 @@ export default class NavigationLightbox extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidUpdate() {    
+    if (this.props.isLightboxOn) {
+      //add class lock-scrolling to HTML      
+      document.querySelector("html").setAttribute("class","lock-scrolling");
+    } else {
+      //remove class lock-scrolling from HTML      
+      document.querySelector("html").removeAttribute("class","lock-scrolling");
+    }
+  }
+
   handleClick() {
     this.props.closeNavigation();    
   }
